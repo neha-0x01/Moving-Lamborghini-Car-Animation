@@ -3,6 +3,10 @@
     padding: 0;
 
 }
+body{
+    overflow: hidden;
+}
+
 
 .sky{
     height:100vh ;
@@ -18,15 +22,18 @@
     background-image: url(trees.png);
     background-size: cover;
     position: absolute;
+    top: -144px;
 }
 
 .track{
     height: 60vh;
-    width: 100%;
+    width: 800vw;
     background-image: url(track.png);
-    background-size: cover;
+    background-repeat: repeat-x;
+    /* background-size: cover; */
     position: absolute;
     top: 70vh;
+    animation: carMove linear 13s infinite ;
 }
 
 .car{
@@ -36,4 +43,53 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
+    left: 444px;
+     bottom: 30vh; 
+     /*car ko uper lana h toh bottom ko badna hoga */
+     animation: shake linear 3s infinite;
+}
+
+.wheel1 img{
+width: 77px;
+position: relative;
+top: 39px;
+left: 44px;
+animation: wheelRotation linear .6s infinite;
+
+}
+
+
+.wheel2 img{
+width: 77px;
+position: relative;
+top: -39px;
+left: 235px;
+animation: wheelRotation linear .6s infinite;
+}
+
+
+@keyframes wheelRotation
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carMove
+{
+    100%{
+        transform: translate(-500vw);
+    }
+}
+@keyframes shake
+{
+    100%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
 }
