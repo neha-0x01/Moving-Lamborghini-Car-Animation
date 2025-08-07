@@ -46,7 +46,7 @@ body{
     left: 444px;
      bottom: 30vh; 
      /*car ko uper lana h toh bottom ko badna hoga */
-     animation: shake linear 3s infinite;
+     animation: shake linear .3s infinite;
 }
 
 .wheel1 img{
@@ -54,7 +54,7 @@ width: 77px;
 position: relative;
 top: 39px;
 left: 44px;
-animation: wheelRotation linear .6s infinite;
+animation: wheelRotation linear .16s infinite;
 
 }
 
@@ -64,7 +64,7 @@ width: 77px;
 position: relative;
 top: -39px;
 left: 235px;
-animation: wheelRotation linear .6s infinite;
+animation: wheelRotation linear .16s infinite;
 }
 
 
